@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Babsy – Die neue Welt der Kinderbetreuung</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Babsy custom colors */
+    :root {
+      --babsy-pink: #c02378;
+      --babsy-blue: #21b3c8;
+    }
+  </style>
+</head>
+<body class="antialiased bg-white text-gray-800 font-sans">
+  
+  <!-- HEADER -->
+  <header class="fixed w-full bg-white/90 backdrop-blur border-b border-gray-100 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <a href="#" class="flex items-center space-x-2">
+        <img src="logo.png" alt="Babsy Logo" class="h-8">
+      </a>
+      <nav class="hidden md:flex space-x-8 font-medium">
+        <a href="#verein" class="hover:text-[var(--babsy-blue)]">Der Verein</a>
+        <a href="#spenden" class="hover:text-[var(--babsy-blue)]">Spenden</a>
+        <a href="#app" class="hover:text-[var(--babsy-blue)]">App</a>
+        <a href="#ressourcen" class="hover:text-[var(--babsy-blue)]">Ressourcen</a>
+        <a href="#events" class="hover:text-[var(--babsy-blue)]">Events</a>
+      </nav>
+      <button class="md:hidden">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-sky-50 via-white to-pink-50 overflow-hidden pt-20">
+    
+    <!-- Decorative Background Circles -->
+    <div class="absolute -top-20 -left-32 w-80 h-80 bg-[var(--babsy-blue)] opacity-10 rounded-full"></div>
+    <div class="absolute top-1/3 -right-20 w-56 h-56 bg-[var(--babsy-pink)] opacity-10 rounded-full"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center px-6">
+      
+      <!-- TEXT -->
+      <div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900">
+          <span class="block">sicher. schnell. seriös</span>
+          <span class="block text-[var(--babsy-blue)]">safe. swift. reliable</span>
+        </h1>
+        <p class="mt-6 text-lg text-gray-600 max-w-md">
+          Verfügbar als App für registrierte Eltern und Sitter
+        </p>
+        <div class="mt-8">
+          <a href="#register"
+             class="inline-block px-8 py-3 rounded-full text-white font-semibold bg-[var(--babsy-pink)] hover:bg-pink-700 shadow-lg transition">
+            Jetzt registrieren
+          </a>
+        </div>
+      </div>
+
+      <!-- IMAGE -->
+      <div class="relative flex justify-center">
+        <div class="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-[var(--babsy-blue)] shadow-xl">
+          <img src="children.jpg" alt="Babsy Kinder" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ABOUT (Preview Section) -->
+  <section id="verein" class="py-20">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h5 class="text-[var(--babsy-pink)] font-semibold uppercase">Wir stellen uns vor</h5>
+      <h2 class="text-3xl md:text-4xl font-bold mb-8">Was ist Babsy?</h2>
+      <p class="text-lg text-gray-600 leading-relaxed">
+        Babsy ist ein gemeinnütziger Verein, der Familien mit geprüften, liebevollen Sittern vernetzt –
+        flexibel, zuverlässig und sicher. 
+        <br><br>
+        Egal ob spontane Notfälle, lang geplante Termine oder Freizeitgestaltung:  
+        Unsere Mission ist eine Kinderbetreuung, die so flexibel ist wie das Leben selbst.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300 py-12">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-white font-semibold mb-2">Kontakt</h3>
+        <p>Weidenweg 28<br>4303 Kaiseraugst</p>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold mb-2">Anrufen</h3>
+        <p>Andrea +41 78 861 60 25</p>
+        <p>Stephanie +41 79 938 61 09</p>
+        <p>Oliver +41 76 374 11 09</p>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold mb-2">Schreibe uns</h3>
+        <p>parent@verein.babsy.ch</p>
+        <p>sitter@verein.babsy.ch</p>
+        <p>company@verein.babsy.ch</p>
+      </div>
+    </div>
+    <div class="mt-10 text-center border-t border-gray-700 pt-6 text-sm">
+      © 2025 Babsy Staging – Alle Rechte vorbehalten.
+    </div>
+  </footer>
+
+</body>
+</html>

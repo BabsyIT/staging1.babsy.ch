@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babsy - Gemeinnütziger Verein für Kinderbetreuung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <img src="cropped-babsy-logo-1.png" alt="Babsy Logo" class="h-12 w-auto">
+                    <span class="ml-3 text-2xl font-bold gradient-text">Babsy</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-purple-600 transition duration-300 font-medium">Start</a>
+                    <a href="#about" class="text-gray-700 hover:text-purple-600 transition duration-300 font-medium">Über uns</a>
+                    <a href="#services" class="text-gray-700 hover:text-purple-600 transition duration-300 font-medium">Leistungen</a>
+                    <a href="#contact" class="text-gray-700 hover:text-purple-600 transition duration-300 font-medium">Kontakt</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-700 hover:text-purple-600 focus:outline-none" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-purple-600 transition duration-300">Start</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-purple-600 transition duration-300">Über uns</a>
+                <a href="#services" class="block px-3 py-2 text-gray-700 hover:text-purple-600 transition duration-300">Leistungen</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-purple-600 transition duration-300">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative overflow-hidden">
+        <div class="hero-gradient absolute inset-0 opacity-5"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                        Willkommen bei <span class="gradient-text">Babsy</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
+                        Herzlich willkommen auf der offiziellen Website vom Verein Babsy. Wir sind ein engagierter, 
+                        gemeinnütziger Verein, der sich dem Thema Kinderbetreuung und Vereinbarkeit von Familie, 
+                        Beruf und Selbstverwirklichung widmet.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <button class="hero-gradient text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl transform hover:scale-105 transition duration-300">
+                            Mehr erfahren
+                        </button>
+                        <button class="bg-white text-purple-600 border-2 border-purple-600 px-8 py-4 rounded-full font-semibold hover:bg-purple-50 transform hover:scale-105 transition duration-300">
+                            Kontakt aufnehmen
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute inset-0 hero-gradient opacity-20 blur-3xl"></div>
+                    <img src="Gemeinnuetziger_Verein.jpg" alt="Gemeinnütziger Verein" 
+                         class="relative rounded-2xl shadow-2xl w-full h-auto float-animation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Unsere <span class="gradient-text">Schwerpunkte</span>
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Wir unterstützen Familien dabei, die Balance zwischen Beruf, Familie und persönlicher Entwicklung zu finden.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="group hover:shadow-2xl transition-shadow duration-300 rounded-xl p-8 bg-gradient-to-br from-purple-50 to-indigo-50">
+                    <div class="hero-gradient w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Kinderbetreuung</h3>
+                    <p class="text-gray-600">Professionelle und liebevolle Betreuung für Ihre Kinder in einem sicheren Umfeld.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="group hover:shadow-2xl transition-shadow duration-300 rounded-xl p-8 bg-gradient-to-br from-indigo-50 to-purple-50">
+                    <div class="hero-gradient w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Beruf & Familie</h3>
+                    <p class="text-gray-600">Unterstützung bei der Vereinbarkeit von beruflichen Zielen und Familienleben.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="group hover:shadow-2xl transition-shadow duration-300 rounded-xl p-8 bg-gradient-to-br from-purple-50 to-indigo-50">
+                    <div class="hero-gradient w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Selbstverwirklichung</h3>
+                    <p class="text-gray-600">Förderung der persönlichen Entwicklung und individuellen Potenziale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-purple-600 to-indigo-600">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                Werden Sie Teil unserer Gemeinschaft
+            </h2>
+            <p class="text-xl text-purple-100 mb-8">
+                Gemeinsam schaffen wir eine bessere Zukunft für Familien und Kinder.
+            </p>
+            <button class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold hover:shadow-xl transform hover:scale-105 transition duration-300">
+                Jetzt Mitglied werden
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <img src="cropped-babsy-logo-1.png" alt="Babsy Logo" class="h-8 w-auto brightness-0 invert">
+                    <span class="ml-3 text-xl font-bold">Babsy</span>
+                </div>
+                <p class="text-gray-400 text-center md:text-right">
+                    © 2024 Verein Babsy. Alle Rechte vorbehalten.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
