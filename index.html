@@ -133,18 +133,19 @@
                 </div>
             </div>
             
-<!-- Image with direct path -->
-<div class="relative lg:h-screen">
-    <div class="h-full flex items-center justify-center p-4">
-        <div class="w-full max-w-lg lg:max-w-full h-98 rounded-3xl overflow-hidden float-animation">
-            <img 
-                src="babsy-hero-image.jpg" 
-                alt="Babsy Kinderbetreuung"
-                class="w-full h-full object-cover"
-            >
+            <!-- Image with direct path -->
+            <div class="relative lg:h-screen">
+                <div class="h-full flex items-center justify-center p-4">
+                    <div class="w-full max-w-lg lg:max-w-full h-98 rounded-3xl overflow-hidden float-animation">
+                        <img 
+                            src="babsy-hero-image.jpg" 
+                            alt="Babsy Kinderbetreuung"
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
         
         <!-- Wave divider -->
         <div class="absolute bottom-0 w-full">
@@ -460,7 +461,7 @@
                 <p class="text-gray-600 text-lg">Wir sind für Sie da</p>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
                 <div class="bg-white rounded-xl shadow-lg p-6">
                     <div class="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -468,56 +469,16 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                         </svg>
                     </div>
-<h3 class="text-lg font-semibold mb-2">Besuche uns</h3>
-<p class="text-gray-600">
-    Babsy Office<br>
-    Weidenweg 28<br>
-    4303 Kaiseraugst
-</p>
-<p id="opening-times" class="text-sm mt-2">
-    Mo-Fr 09-12 | 14-17h
-</p>
-
-
-<script>
-    function checkOpeningTimes() {
-        const now = new Date();
-        const day = now.getDay(); // Sonntag=0, Montag=1, ..., Samstag=6
-        const hour = now.getHours();
-        const minute = now.getMinutes();
-        const time = hour * 60 + minute; // Minuten seit Mitternacht
-
-        const openingTimes = {
-            1: [[9 * 60, 12 * 60], [14 * 60, 17 * 60]], // Mo
-            2: [[9 * 60, 12 * 60], [14 * 60, 17 * 60]], // Di
-            3: [[9 * 60, 12 * 60], [14 * 60, 17 * 60]], // Mi
-            4: [[9 * 60, 12 * 60], [14 * 60, 17 * 60]], // Do
-            5: [[9 * 60, 12 * 60], [14 * 60, 17 * 60]], // Fr
-        };
-
-        let el = document.getElementById("opening-times");
-
-        if (day === 0 || day === 6) {
-            // Wochenende
-            el.innerHTML = "Mo–Fr 09–12 | 14–17h <span class='text-red-500 font-semibold'>(Geschlossen – Wochenende)</span>";
-            return;
-        }
-
-        let isOpen = false;
-        if (openingTimes[day]) {
-            isOpen = openingTimes[day].some(([start, end]) => time >= start && time < end);
-        }
-
-        if (isOpen) {
-            el.innerHTML = "Mo–Fr 09–12 | 14–17h <span class='text-green-500 font-semibold'>(Geöffnet)</span>";
-        } else {
-            el.innerHTML = "Mo–Fr 09–12 | 14–17h <span class='text-red-500 font-semibold'>(Geschlossen)</span>";
-        }
-    }
-
-    checkOpeningTimes();
-</script>
-
+                    <h3 class="text-lg font-semibold mb-2">Besuche uns</h3>
+                    <p class="text-gray-600">
+                        Babsy Office<br>
+                        Weidenweg 28<br>
+                        4303 Kaiseraugst
+                    </p>
+                    <p id="opening-times" class="text-sm mt-2">
+                        Mo-Fr 09-12 | 14-17h
+                    </p>
+                </div>
                 
                 <div class="bg-white rounded-xl shadow-lg p-6">
                     <div class="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
@@ -538,21 +499,60 @@
                         <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                         </svg>
-</div>
-<h3 class="text-lg font-semibold mb-2">Schreibe uns</h3>
-<div class="space-y-1">
-    <p class="text-gray-600">
-        <a href="mailto:parent@babsy.ch" class="text-purple-600">parent@babsy.ch</a>
-    </p>
-    <p class="text-gray-600">
-        <a href="mailto:sitter@babsy.ch" class="text-purple-600">sitter@babsy.ch</a>
-    </p>
-    <p class="text-gray-600">
-        <a href="mailto:company@babsy.ch" class="text-purple-600">company@babsy.ch</a>
-    </p>
-</div> 
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Schreibe uns</h3>
+                    <div class="space-y-1">
+                        <p class="text-gray-600">
+                            <a href="mailto:parent@babsy.ch" class="text-purple-600">parent@babsy.ch</a>
+                        </p>
+                        <p class="text-gray-600">
+                            <a href="mailto:sitter@babsy.ch" class="text-purple-600">sitter@babsy.ch</a>
+                        </p>
+                        <p class="text-gray-600">
+                            <a href="mailto:company@babsy.ch" class="text-purple-600">company@babsy.ch</a>
+                        </p>
+                    </div> 
                 </div>
             </div>
+            
+            <script>
+                function checkOpeningTimes() {
+                    const now = new Date();
+                    const day = now.getDay(); // Sonntag=0, Montag=1, ..., Samstag=6
+                    const hour = now.getHours();
+                    const minute = now.getMinutes();
+                    const time = hour * 60 + minute; // Minuten seit Mitternacht
+
+                    const openingTimes = {
+                        1: [[9 * 60, 12 * 60], [14 * 60, 17 * 60]], // Mo
+                        2: [[9 * 60, 12 * 60], [14 * 60, 17 * 60]], // Di
+                        3: [[9 * 60, 12 * 60], [14 * 60, 17 * 60]], // Mi
+                        4: [[9 * 60, 12 * 60], [14 * 60, 17 * 60]], // Do
+                        5: [[9 * 60, 12 * 60], [14 * 60, 17 * 60]], // Fr
+                    };
+
+                    let el = document.getElementById("opening-times");
+
+                    if (day === 0 || day === 6) {
+                        // Wochenende
+                        el.innerHTML = "Mo–Fr 09–12 | 14–17h <span class='text-red-500 font-semibold'>(Geschlossen – Wochenende)</span>";
+                        return;
+                    }
+
+                    let isOpen = false;
+                    if (openingTimes[day]) {
+                        isOpen = openingTimes[day].some(([start, end]) => time >= start && time < end);
+                    }
+
+                    if (isOpen) {
+                        el.innerHTML = "Mo–Fr 09–12 | 14–17h <span class='text-green-500 font-semibold'>(Geöffnet)</span>";
+                    } else {
+                        el.innerHTML = "Mo–Fr 09–12 | 14–17h <span class='text-red-500 font-semibold'>(Geschlossen)</span>";
+                    }
+                }
+
+                checkOpeningTimes();
+            </script>
             
             <!-- Newsletter -->
             <div class="mt-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-center relative overflow-hidden">
